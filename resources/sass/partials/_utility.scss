@@ -1,0 +1,39 @@
+// Layout
+
+.container {
+    max-width: 1120px;
+    margin: 0 auto;
+}
+
+@mixin flex-center ($flex-direcion:row) {
+    display: flex;
+    flex-direction: $flex-direction;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-align($align, $direction:row) {
+    display: flex;
+    flex-direction:$direction;
+    align-items: $align;
+}
+
+@mixin flex-justify($justify, $direction:row) {
+    display: flex;
+    flex-direction:$direction;
+    justify-content: $justify;
+}
+
+// Testo
+@mixin link-formatter($color) {
+    text-decoration: none;
+    color: $color
+}
+
+// Liste
+@mixin list-flex($flex-direction:row, $list-style:none) {
+    display: flex;
+    flex-direction: $flex-direction;
+    list-style: $list-style;
+}
+

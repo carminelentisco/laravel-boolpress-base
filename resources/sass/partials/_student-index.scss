@@ -1,0 +1,23 @@
+.user-index {
+    margin-top: 100px;
+    h1 { 
+        text-transform: uppercase;
+        text-align: center;
+    }
+    
+    img { border-radius: 15px; }
+    
+    .user {
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 15px;
+        box-shadow: 0 15px 15px grey;
+        @include flex-align(center);
+        @include flex-justify(start);
+    }
+
+    .user-info {
+        margin-left: 30px;
+        justify-self: start;
+    }
+}

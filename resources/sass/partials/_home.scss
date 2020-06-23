@@ -1,0 +1,25 @@
+.home-route {
+    margin-top: 100px;
+    @include flex-justify (space-around);
+    
+    a { 
+        flex-basis: 35%;
+        @include link-formatter($white); 
+
+
+    }
+    
+    .card {
+        padding: 40px;
+        background-color: #EB4550;
+        @include flex-justify (start,column);
+
+        h2 {
+            font-weight: 600;
+            font-size: 35px;
+            margin-bottom: 15px;;
+        }
+        
+        small { color: $black }
+    }
+}

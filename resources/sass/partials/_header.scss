@@ -1,0 +1,25 @@
+.header-page {
+    padding: 15px;
+    color: $white;
+    background-color: $black;
+    nav {
+        @include flex-justify(space-between);
+        @include flex-align(center);
+    }
+    
+    .header-title {
+        font-weight: 600;
+        font-size: 25px;
+    }
+
+    a {
+        @include link-formatter($white);
+    }
+
+    ul {
+        @include list-flex();
+        a {
+            margin-right: 20px;
+        }
+    }
+}

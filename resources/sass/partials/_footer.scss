@@ -1,0 +1,6 @@
+.footer-page {
+    padding: 20px;
+    color: $white;
+    background: $black;
+    @include flex-justify(center);
+}

@@ -1,6 +1,6 @@
 @include('shared.header')
 
-<main>
+<main class="main-content">
     @yield('main-content')
 </main>
 
