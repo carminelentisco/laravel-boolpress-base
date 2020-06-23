@@ -8,5 +8,10 @@
 </head>
 <body>
     <header>
-        
+        <nav>
+            <ul>
+                <li><a href="{{ route('users.index') }}">User Index</a></li>
+                <li><a href="{{ route('posts.index') }}">Post index</a></li>
+            </ul>
+        </nav>
     </header>
