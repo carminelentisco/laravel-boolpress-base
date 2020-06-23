@@ -1,33 +1,35 @@
 @extends('layouts.main')
 @section('main-content')
 
-   <h1>Blog Archive</h1>
-    @foreach($posts as $post)
-        <article>
-            <h2>{{ $post->title }}</h2>
-            <h3 class="author">Autore: {{ $post->user->name }}</h3>
-            <h4>Created: {{ $post->created_at }}, Last update: {{ $post->updated_at }}</h4>
-            <p>{{ $post->body }}</p>
-            <hr>
-            <h3>Comments:</h3>
-            {{-- @foreach($post->comments as $comment)
+   <div class="container">
+        <section class="posts-page-container">
+            <h1 class="title-page">Blog Archive</h1>
+            @foreach($posts as $post)
                 
-                <h4>{{ $comment->name }}</h4>
-                <p>{{ $comment->body }}</p>
-            @endforeach --}}
-
-            @forelse ($post->comments as $comment)
-            <h4>{{ $comment->name }}</h4>
-            <p>{{ $comment->body }}</p>
-            @empty
-                <h1>Non vi sono commenti disponibili</h1>
-            @endforelse
+                <div class="posts">
+                    <article>
+                        <h2>{{ $post->title }}</h2>
+                        <p>{{ $post->body }}</p>  
+                        <div class="info-date">
+                            <h3 class="author">Autore: {{ $post->user->name }}</h3>
+                            <small>Created: {{ $post->created_at }}, Last update: {{ $post->updated_at }}</small>
+                        </div>     
+                    </article>
             
-        </article>
+                    <div class="comment-container">
+                        <h3>Comments:</h3>
+                        @forelse ($post->comments as $comment)
+                            <h4>{{ $comment->name }}</h4>
+                            <p>{{ $comment->body }}</p>
+                        @empty
+                            <h2>Non vi sono commenti disponibili</h2>
+                        @endforelse
+                    </div>
+                </div>
 
-        @if (!$loop->last)
-        <hr>
-        @endif
-    @endforeach
+            
+            @endforeach
+        </section>
+   </div>
 
 @endsection

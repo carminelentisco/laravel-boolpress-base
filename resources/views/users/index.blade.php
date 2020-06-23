@@ -33,7 +33,7 @@
 
     <div class="container">
         <div class="user-index">
-            <h1>User Index</h1>
+            <h1 class="title-page">User Index</h1>
 
             @foreach($users as $user)
                 <div class="user">
