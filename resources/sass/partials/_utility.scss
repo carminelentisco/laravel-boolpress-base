@@ -1,5 +1,4 @@
 // Layout
-
 .container {
     max-width: 1120px;
     margin: 0 auto;
@@ -25,6 +24,13 @@
 }
 
 // Testo
+.title-page {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 30px;
+    margin-bottom: 50px;
+}
+
 @mixin link-formatter($color) {
     text-decoration: none;
     color: $color

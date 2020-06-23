@@ -1,0 +1,29 @@
+.posts-page-container {
+    margin-top: 100px;   
+}
+
+.posts {
+    padding: 20px;
+    margin-bottom: 50px;
+    border-radius: 15px;
+    box-shadow: 0 19px 15px grey;
+    article {
+        margin-bottom: 15px;
+        h2 {
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+    }
+
+    .info-date {
+        text-align: right;
+        margin-top: 20px;
+    }
+
+    .comment-container {
+        padding: 20px;
+        color: $white;
+        border-radius: 15px;
+        background-color: dodgerblue;
+    }
+}

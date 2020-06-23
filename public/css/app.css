@@ -21,6 +21,13 @@ body .main-content {
   margin: 0 auto;
 }
 
+.title-page {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 30px;
+  margin-bottom: 50px;
+}
+
 .header-page {
   padding: 15px;
   color: #fff;
@@ -91,11 +98,6 @@ body .main-content {
   margin-top: 100px;
 }
 
-.user-index h1 {
-  text-transform: uppercase;
-  text-align: center;
-}
-
 .user-index img {
   border-radius: 15px;
 }
@@ -116,6 +118,38 @@ body .main-content {
 .user-index .user-info {
   margin-left: 30px;
   justify-self: start;
+}
+
+.posts-page-container {
+  margin-top: 100px;
+}
+
+.posts {
+  padding: 20px;
+  margin-bottom: 50px;
+  border-radius: 15px;
+  box-shadow: 0 19px 15px grey;
+}
+
+.posts article {
+  margin-bottom: 15px;
+}
+
+.posts article h2 {
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.posts .info-date {
+  text-align: right;
+  margin-top: 20px;
+}
+
+.posts .comment-container {
+  padding: 20px;
+  color: #fff;
+  border-radius: 15px;
+  background-color: dodgerblue;
 }
 
 .footer-page {
