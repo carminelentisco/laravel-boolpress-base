@@ -10,10 +10,18 @@
             <p>{{ $post->body }}</p>
             <hr>
             <h3>Comments:</h3>
-            @foreach($post->comments as $comment)
+            {{-- @foreach($post->comments as $comment)
+                
                 <h4>{{ $comment->name }}</h4>
                 <p>{{ $comment->body }}</p>
-            @endforeach
+            @endforeach --}}
+
+            @forelse ($post->comments as $comment)
+            <h4>{{ $comment->name }}</h4>
+            <p>{{ $comment->body }}</p>
+            @empty
+                <h1>Non vi sono commenti disponibili</h1>
+            @endforelse
             
         </article>
 
