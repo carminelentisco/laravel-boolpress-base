@@ -15,6 +15,7 @@
             <ul class="list-inline">
                 <li><a href="{{ route('users.index') }}">User Index</a></li>
                 <li><a href="{{ route('posts.index') }}">Post index</a></li>
+                <li><a href="{{ route('posts.create') }}">New Post</a></li>
             </ul>
         </nav>
     </header>

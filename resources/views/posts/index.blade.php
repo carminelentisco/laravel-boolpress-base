@@ -3,6 +3,9 @@
 
    <div class="container">
         <section class="posts-page-container">
+            @if (session('post-deleted'))
+                <p>{{ session('post-deleted')  }} è stato eliminato</p>
+            @endif
             <h1 class="title-page">Blog Archive</h1>
             @foreach($posts as $post)
                 
@@ -28,7 +31,8 @@
                     </div>
                 </div>
 
-            
+                <h4>Navigation</h4>
+                {{ $posts->links() }}
             @endforeach
         </section>
    </div>
