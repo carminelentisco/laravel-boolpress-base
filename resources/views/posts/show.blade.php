@@ -3,8 +3,6 @@
 
    <div class="container">
         <section class="posts-page-container">
-            <h1 class="title-page">Blog Archive</h1>
-            @foreach($posts as $post)
                 
                 <div class="posts">
                     <article>
@@ -13,7 +11,6 @@
                         <div class="info-date">
                             <h3 class="author">Autore: {{ $post->user->name }}</h3>
                             <small>Created: {{ $post->created_at }}, Last update: {{ $post->updated_at }}</small>
-                            <a href="{{ route('posts.show', $post->slug) }}">Leggi di più</a>
                         </div>     
                     </article>
             
@@ -27,9 +24,6 @@
                         @endforelse
                     </div>
                 </div>
-
-            
-            @endforeach
         </section>
    </div>
 

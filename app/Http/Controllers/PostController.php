@@ -45,9 +45,16 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($slug)
     {
-        //
+        $post = Post::where('slug', $slug)->first(); // Cerco il post con lo slug = allo slug che gli arriva
+
+        // Controllo della presenza dell array pieno in $post 
+        if ( empty($post) ) {
+            abort('404');
+        }
+
+        return view('posts.show', compact('post'));
     }
 
     /**
